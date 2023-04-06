@@ -19,21 +19,7 @@ pipeline{
                 echo "deploying to dev environment"
             }
         }
-        stage("QA Deploy"){
-            when{
-                branch 'qa'
-            }
-            steps{
-                echo "deploying to qa environment"
-            }
-        }
-        stage("Prod Deploy"){
-            when{
-                branch 'main'
-            }
-            steps{
-                echo "deploying to production environment"
-            }
+        
         }
     }
 }
